@@ -44,45 +44,83 @@
                 Command="{Binding AddJucarieCommand}">
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="CornerRadius" Value="12"/>
                 </Style>
             </Button.Resources>
         </Button>
 
         <Button x:Name="btnViewJucarii" Content="Vizualizeaza Jucarii"
                 Grid.Column="1" Grid.Row="2"
-                Command="{Binding ShowJucarii}"/>
+                Command="{Binding ShowJucarii}">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button x:Name="btnAddComenzi" Content="Adauga Comanda"
                 Grid.Column="1" Grid.Row="3"
-                Command="{Binding AddComandaCommand}"/>
+                Command="{Binding AddComandaCommand}">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button x:Name="btnViewComenzi" Content="Vizualizeaza Comenzile"
                 Grid.Column="1" Grid.Row="4"
-                Command="{Binding ShowComenzi}"/>
+                Command="{Binding ShowComenzi}">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button x:Name="btnViewComenziPret"
                 Grid.Column="1" Grid.Row="5"
                 Command="{Binding ShowComenziPret}" Margin="23,10,23,10">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Vizualizeaza comenzile cu suma cuprinsa intre 30 si 50 lei"/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
         </Button>
 
         <Button x:Name="btnViewJucariiSuma"
                 Grid.Column="1" Grid.Row="6"
                 Command="{Binding ShowJucariiSumaCommand}" Margin="23,10,23,10">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Vizualizeaza suma vanzarilor per fiecare jucarie "/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
         </Button>
 
         <Button x:Name="btnViewComenziData"
                 Grid.Column="1" Grid.Row="7"
                 Command="{Binding ShowComenziDataCommand}" Margin="23,10,23,10">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Lista comenzilor efectuate intre anii 2019 si 2022"/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
         </Button>
 
         <Button x:Name="btnJucariiVarstaData"
                 Grid.Column="1" Grid.Row="8"
                 Command="{Binding ShowJucariiVarstaCommand}" Margin="23,10,23,10">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Lista jucariilor recomandate copiilor de la 7 la 10 ani"/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
         </Button>
     </Grid>
 </Window>
