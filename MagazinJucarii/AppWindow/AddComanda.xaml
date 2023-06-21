@@ -1,0 +1,71 @@
+﻿<Window x:Class="MagazinJucarii.AppWindow.AddComanda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagazinJucarii.AppWindow"
+        mc:Ignorable="d"
+        Title="AddComanda" Height="450" Width="750" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="20 20 10 20"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Text="Adaugare Comanda"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
+                   FontSize="30"
+                   />
+
+        <TextBlock Text="Nume Client"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+        <TextBox   x:Name="tbxNumeClient"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   Text="{Binding NumeClient}"/>
+
+        <TextBlock Text="DataProcurarii"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+
+
+        <DatePicker x:Name="dpDataProcurarii"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   Margin="20 20 10 20"
+                   SelectedDateFormat="Short"
+                   Text="{Binding DataProcurarii}"/>
+
+        <TextBlock Text="Alege Jucaria"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   />
+        <ComboBox x:Name="cbxJucarii" Grid.Row="3" Margin="20" Grid.Column="1" ItemsSource="{Binding AppViewModel.Jucarii}" DisplayMemberPath="Denumire"/>
+
+
+        <Button x:Name="btnAddComanda" Content="Adauga" Grid.ColumnSpan="2" Grid.Row="4" Background="Green" Foreground="White" Margin="150 20 150 20" Click="Button_Click"/>
+    </Grid>
+</Window>

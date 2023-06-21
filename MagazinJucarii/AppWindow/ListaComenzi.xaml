@@ -1,0 +1,45 @@
+﻿<Window x:Class="MagazinJucarii.AppWindow.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagazinJucarii.AppWindow"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Lista Comenzilor" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <DataGrid x:Name="dgComenzi"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Comenzi}"
+                  Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Cod Comanda"
+                                    Binding="{Binding CodComanda}"
+                                    MinWidth="50"/>
+                <DataGridTextColumn Header="Nume Client"
+                                    Binding="{Binding NumeClient}"
+                                    MinWidth="200"/>
+                <DataGridTextColumn Header="Data Procurarii"
+                                    Binding="{Binding DataProcurarii}"
+                                    MinWidth="150"/>
+                <DataGridTextColumn Header="Denumire Jucarie"
+                                    Binding="{Binding Jucarie.Denumire}"
+                                    MinWidth="200"/>
+                <DataGridTextColumn Header="Pret Jucarie"
+                                    Binding="{Binding Jucarie.Pret}"
+                                    MinWidth="150"/>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Editare" Click="Editare_Click"/>
+                    <MenuItem Header="Sterge"  Click="Sterge_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</Window>
